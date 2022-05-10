@@ -80,19 +80,20 @@ body{
 
 .wrapper .main_content{
   width: 100%;
+  background: #4b4276; 
   margin-left: 200px;
 }
 
 .wrapper .main_content .header{
-  padding: 20px;
-  background: #fff;
-  color: #717171;
-  border-bottom: 1px solid #e0e4e8;
+    padding: 20px;
+    background: #871f1f;
+    color: white;
+    border-bottom: 1px solid #e0e4e8;
 }
 
 .wrapper .main_content .info{
   margin: 20px;
-  color: #717171;
+  color: #4b4276;
   line-height: 25px;
 }
 

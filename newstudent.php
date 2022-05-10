@@ -6,7 +6,6 @@ include('navbar.php');
 
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +21,7 @@ include('navbar.php');
 
              .container {
               top: 16%;
-              left: 12%;
+              left: 10%;
               position: absolute;
 
              }
@@ -31,16 +30,16 @@ include('navbar.php');
                 
              }
              .modal-content {
-              width: 90%;   
+              width: 70%;   
              }
 
              .student {
-              left: 12%;
+              left: 5%;
               position: absolute;
              }
             .student1{
               top: 0%;
-              left: 65.5%;
+              left: 75%;
               position: absolute;
              }
 
@@ -60,7 +59,7 @@ include('navbar.php');
 
 
           <div class="form-group">
-            <label>LRN</label>
+            <label>STUDENT NO.</label>
             <input type="text" name="lrn" class="form-control" placeholder="Your LRN....." required>
           </div>
 
@@ -88,15 +87,7 @@ include('navbar.php');
                 <option value="BSEMC">  BSEMC  </option>
               </select>
             </div>
-          </div>
-        </div>
-      </div>
 
-
-      <div class="student1">
-       <div class="modal-dialog">
-        <div class="modal-content">
-         <div class="modal-header">
           <div class="form-group">
             <label>YEAR AND SECTION</label>
             <select name="year" class="form-control">
@@ -114,7 +105,7 @@ include('navbar.php');
 
           <div class="form-group">
             <label>CONTACT</label>
-            <input type="number" name="contact" class="form-control" placeholder="Your Number....." required>
+            <input type="text" name="contact" class="form-control" placeholder="Your Number....." required>
           </div>
 
           <div class="form-group">
@@ -122,12 +113,56 @@ include('navbar.php');
             <input type="text" name="address" class="form-control" placeholder="Your Address....." required>
           </div>
 
+             </div>
+        </div>
+      </div>
+
+
+       <div class="student1">
+       <div class="modal-dialog">
+        <div class="modal-content">
+         <div class="modal-header"> 
+
           <div class="form-group">
             <label>IMAGE</label>
             <input type="file" name="pic" accept="image/png, image/jpg, image/jpeg"  class="form-control" required>
+          </div> 
+
+            <div class="form-group">
+            <label>SCHOOL ID</label>
+            <input type="file" name="std_id" accept="image/png, image/jpg, image/jpeg"  class="form-control">
+          </div> 
+           
+          <div class="form-group">
+            <label>LOI 1ST YEAR</label>
+            <input type="file" name="loi_1st" accept="application/msword,text/plain, application/pdf" class="form-control" required>
           </div>
 
-          <br>
+          <div class="form-group">
+            <label>LOI 2ND YEAR</label>
+            <input type="file" name="loi_2nd" accept="application/msword,text/plain, application/pdf" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label>REGISTRATION FORM 1ST SEM</label>
+            <input type="file" name="regform_1st" accept="image/png, image/jpg, image/jpeg"  class="form-control" required>
+          </div> 
+
+          <div class="form-group">
+            <label>REGISTRATION FORM 2ND SEM</label>
+            <input type="file" name="regform_2nd" accept="image/png, image/jpg, image/jpeg"  class="form-control">
+          </div> 
+
+           <div class="form-group">
+            <label>GRADES 1ST SEM</label>
+            <input type="file" name="grades_1st" accept="image/png, image/jpg, image/jpeg"  class="form-control" required>
+          </div> 
+
+           <div class="form-group">
+            <label>GRADES 2ND SEM</label>
+            <input type="file" name="grades_2nd" accept="image/png, image/jpg, image/jpeg"  class="form-control">
+          </div> 
+
            <center><input type="submit" name="submit" class="btn btn-info btn-large" value="Submit"></center>
           
           

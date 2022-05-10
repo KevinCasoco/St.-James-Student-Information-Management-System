@@ -14,12 +14,11 @@
 
         <br>
         <br>
-        <br>
-        <br>
         <ul>
             <li><a href="studentinformation.php"><i class="fas fa-search"></i>Browse Students</a></li>
             <li><a href="newstudent.php"><i class="fas fa-user"></i>Add New Students</a></li>
             <li><a href="studentinfo.php"><i class="fas fa-table"></i>List of Students</a></li>
+            <li><a href="studentinfo2.php"><i class="fas fa-table"></i>Application of Students</a></li>
             <li><a href="logout.php"><i class="fas fa-user"></i>Log Out</a></li>
                                            
         </ul> 

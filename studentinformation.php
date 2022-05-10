@@ -3,13 +3,12 @@
  include('navbar.php');
  include('config.php');
 
- $query ="SELECT * FROM students ORDER BY ID DESC";  
+ $query ="SELECT * FROM student ORDER BY ID DESC";  
  $result = mysqli_query($conn, $query);  
  ?>  
  <!DOCTYPE html>  
  <html>  
       <head>  
- 
           <title>STUDENT INFORMATION SYSTEM</title>  
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
@@ -33,7 +32,7 @@
                 <br />  <br>
                 <div class="table-responsive">  
                     <h3 align="center"> LIST OF STUDENTS</h3>  
-                     <table id="employee_data" class="table table-striped table-bordered">  
+                     <table id="student_data" class="table table-striped table-bordered">  
 
                           <thead>  
                                <tr>  
@@ -74,7 +73,9 @@
  </html>  
  <script>  
  $(document).ready(function(){  
-      $('#employee_data').DataTable();  
+      $('#student_data').DataTable();  
      
  });  
- </script> 
+ </script>
+
+ 

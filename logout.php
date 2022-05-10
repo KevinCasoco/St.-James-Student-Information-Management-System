@@ -6,6 +6,4 @@
 	header("Location: index.php")
 
 
-
-
 ?>

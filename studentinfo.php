@@ -16,7 +16,7 @@ include('navbar.php');
     $num_per_page = 5;
     $start_from = ($page-1)*5;
     
-    $sql = "select * from students limit $start_from,$num_per_page";
+    $sql = "select * from student limit $start_from,$num_per_page";
     $result = mysqli_query($conn,$sql);
 
 
@@ -38,8 +38,18 @@ include('navbar.php');
               top: 16%;
               left: 12%;
               position: absolute;
-
              }
+             a {
+       				padding: 5px;     
+        			
+    					}
+     					a:hover img {
+        			transform: scale(4.5);
+        			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        			transition: 0.5s;
+        			border-radius: 5px;
+    					}
+
            </style>
 </head>
 <body>
@@ -73,7 +83,7 @@ include('navbar.php');
 
 			<?php
 
-        	$get_data = "SELECT * FROM students";
+        	$get_data = "SELECT * FROM student";
         	$sql = mysqli_query($conn,$get_data);
 
         	while($row = mysqli_fetch_array($result))
@@ -99,7 +109,7 @@ include('navbar.php');
 				<td class='text-center'>$year</td>
 				<td class='text-center'>$contact</td>
 				<td class='text-center'>$address</td>
-				<td class='text-center'><img src='images/$pic' style='width:50px; height:50px;'></td>
+				<td class='text-center'><a href='#'><img src='images/$pic' style='width:50px; height:50px;'></td>
 				<td class='text-center'>
 					<span>
 					     <a href='#'>
@@ -158,101 +168,6 @@ include('navbar.php');
 	</div>
 
 
-
-	<!-- 
-	- -Add in modal
-
- Modal
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-     Modal content 
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title text-center">Add Data</h4>
-      </div>
-      <div class="modal-body">
-        <form action="add.php" method="POST" enctype="multipart/form-data">
-
-
-        	<div class="form-group">
-        		<label>LRN</label>
-        		<input type="text" name="lrn" class="form-control" placeholder="Your LRN....." required>
-        	</div>
-
-        	<div class="form-group">
-        		<label>FULL NAME</label>
-        		<input type="text" name="fname" class="form-control" placeholder="Your Full Name....." required>
-        	</div>
-
-        	<div class="form-group">
-        		<label>GENDER</label>
-        			<select name="gender" class="form-control">
-        				<option value=""> -- Select --  </option>
-        				<option value="Male">  Male </option>
-        				<option value="Male"> Female </option>
-        			</select>
-        	</div>
-
-        	<div class="form-group">
-        		<label>COURSE</label>
-        		<select name="course" class="form-control">
-        				<option value=""> -- Select --  </option>
-        				<option value="BSIS">  BSIS  </option>
-        				<option value="BSIT">  BSIT  </option>
-        				<option value="BSCS">  BSCS  </option>
-        				<option value="BSEMC">  BSEMC  </option>
-        			</select>
-        	</div>
-
-        	<div class="form-group">
-        		<label>YEAR AND SECTION</label>
-        		<select name="year" class="form-control">
-        				<option value=""> -- Select --  </option>
-        				<option value="1 A">  1 A  </option>
-        				<option value="1 B">  1 B  </option>
-        				<option value="2 A">  2 A  </option>
-        				<option value="2 B">  2 B  </option>
-        				<option value="3 A">  3 A  </option>
-        				<option value="3 B">  3 B  </option>
-        				<option value="4 A">  4 A  </option>
-        				<option value="4 B">  4 B  </option>
-        			</select>
-        	</div>
-
-        	<div class="form-group">
-        		<label>CONTACT</label>
-        		<input type="number" name="contact" class="form-control" placeholder="Your Number....." required>
-        	</div>
-
-        	<div class="form-group">
-        		<label>ADDRESS</label>
-        		<input type="text" name="address" class="form-control" placeholder="Your Address....." required>
-        	</div>
-
-        	<div class="form-group">
-        		<label>IMAGE</label>
-        		<input type="file" name="pic" accept="image/png, image/jpg, image/jpeg"  class="form-control" required>
-        	</div>
-
-        	
-        	 <input type="submit" name="submit" class="btn btn-info btn-large" value="Submit">
-        	
-        	
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
--->
-
 <!------DELETE modal---->
 
 
@@ -261,7 +176,7 @@ include('navbar.php');
 <!-- Modal -->
 <?php
 
-$get_data = "SELECT * FROM students";
+$get_data = "SELECT * FROM student";
 $run_data = mysqli_query($conn,$get_data);
 
 while($row = mysqli_fetch_array($run_data))
@@ -329,7 +244,7 @@ while($row = mysqli_fetch_array($sql))
 
              
         	<div class='form-group'>
-        		<label>SCHOOL ID</label>
+        		<label>STUDENT NO.</label>
         		<input type='text' name='lrn' class='form-control' value='$lrn'>
         	</div>
 

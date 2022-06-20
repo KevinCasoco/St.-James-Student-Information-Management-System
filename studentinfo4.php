@@ -1,7 +1,7 @@
 <?php
 
 include('config.php');
-include('navbar.php');
+include('navbar2.php');
 
 
     if(isset($_GET['page']))
@@ -56,9 +56,6 @@ include('navbar.php');
     <div class="container">
     <div class="">
         <h3 class="text-center">
-            <br>
-            <br>
-            <br>
           STUDENTS INFORMATION</h3>
         <!--
         <h3 class="text-center">
@@ -75,13 +72,12 @@ include('navbar.php');
                 <th class="text-center">STUDENT NO</th>
                 <th class="text-center">FULL NAME</th>
                 <th class="text-center">SCHOOL ID</th>
-                <th class="text-center">LETTER OF INTENT</th>
+                <th class="text-center">LOI 1ST YEAR</th>
+                <th class="text-center">LOI 2ND YEAR</th>
                 <th class="text-center">REG 1ST SEM</th>
                 <th class="text-center">REG 2ND SE,</th>
                 <th class="text-center">GRADES 1ST SEM</th>
                 <th class="text-center">GRADES 2ND SEM</th>
-                <th class="text-center">EDIT</th>
-                <th class="text-center">DELETE</th>
             </tr>
 
             <?php
@@ -96,6 +92,7 @@ include('navbar.php');
                 $fname = $row['fname'];
                 $std_id = $row['std_id'];
                 $loi_1st = $row['loi_1st'];
+                $loi_2nd = $row['loi_2nd'];
                 $regform_1st = $row['regform_1st'];
                 $regform_2nd = $row['regform_2nd'];
                 $grades_1st = $row['grades_1st'];
@@ -107,24 +104,12 @@ include('navbar.php');
                 <td class='text-center'>$fname</td>
                 <td class='text-center'><a href='#'><img src='images/$std_id' style='width:50px; height:50px;'></td>
                 <td class='text-center'>$loi_1st</td>
+                <td class='text-center'>$loi_2nd</td>
                 <td class='text-center'><a href='#'><img src='images/$regform_1st' style='width:50px; height:50px;'></td>
                 <td class='text-center'><a href='#'><img src='images/$regform_2nd' style='width:50px; height:50px;'></td>
                 <td class='text-center'><a href='#'><img src='images/$grades_1st' style='width:50px; height:50px;'></td>
                  <td class='text-center'><a href='#'><img src='images/$grades_2nd' style='width:50px; height:50px;'></td>
                 <td class='text-center'>
-                    <span>
-                         <a href='#'>
-                             <i class='fa fa-pencil' data-toggle='modal' data-target='#edit2$id' style='' aria-hidden='true'></i>
-                        </a>
-                    </span>
-                    
-                </td>
-                <td class='text-center'>
-                    <span>
-                        <a href='#'>
-                             <i class='fa fa-trash' data-toggle='modal' data-target='#$id' style='' aria-hidden='true'></i>
-                        </a>
-                    </span>
                     
                 </td>
             </tr>
@@ -215,6 +200,7 @@ while($row = mysqli_fetch_array($sql))
                 $fname = $row['fname'];
                 $std_id = $row['std_id'];
                 $loi_1st = $row['loi_1st'];
+                $loi_2nd = $row['loi_2nd'];
                 $regform_1st = $row['regform_1st'];
                 $regform_2nd = $row['regform_2nd'];
                 $grades_1st = $row['grades_1st'];
@@ -248,7 +234,10 @@ while($row = mysqli_fetch_array($sql))
                 <label>LOI 1ST SEM</label>
             <input type='file' name='loi_1st' accept='application/msword,text/plain, application/pdf' class='form-control' required>    
             </div>
-            
+            <div class='form-group'>
+                <label>LOI 2ND SEM</label>
+            <input type='file' name='loi_2nd' ' accept='application/msword,text/plain, application/pdf' class='form-control' required>    
+            </div>
                 <div class='form-group'>
                 <label>REGISTRATION FORM 1ST SEM</label>
                 <input type='file' name='regform_1st' accept='image/png, image/jpg, image/jpeg' class='form-control' required>

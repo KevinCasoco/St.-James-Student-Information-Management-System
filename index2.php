@@ -4,29 +4,7 @@
 	session_start();
 
 	if (isset($_SESSION['user'])) {
-		
-	}
-
-	if (isset($_POST['submit'])) {
-		$user = $_POST['user'];
-		$password = $_POST['password'];
-
-		$sql = " SELECT * FROM login_admin WHERE user = '$user' AND password = '$password'";
-		$result = mysqli_query($conn, $sql);
-
-		if ($result->num_rows > 0) {
-			$row = mysqli_fetch_assoc($result);
-			$_SESSION['user'] = $row['user'];
-			header("Location: studentinformation.php");
-		}
-		
-		else {
-			echo "<script>alert('Woops Email or Password is incorrect.')</script>";
-		}
-	}
-
-	if (isset($_SESSION['user'])) {
-		
+		header("Location: index.php");
 	}
 
 	if (isset($_POST['submit'])) {
@@ -82,9 +60,7 @@
         <div class="signup_link">
           Create an account?<br>
          <a href="register_admin.php">Professor</a>
-         <a href="forgotpassword_admin.php">Forgot Password</a><br>
          <a href="register_student.php">Student</a>
-         <a href="forgotpassword_student.php">Forgot Password</a>
         </div>
       </form>
     </div>

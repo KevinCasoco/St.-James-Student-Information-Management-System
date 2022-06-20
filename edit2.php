@@ -2,27 +2,12 @@
 
 include('config.php');
 
+$id = $_GET['id'];
+
 if(isset($_POST['submit'])){
 
 	$lrn = $_POST['lrn'];
 	$fname = $_POST['fname'];
-	$gender = $_POST['gender'];
-	$course = $_POST['course'];
-	$year = $_POST['year'];
-	$contact = $_POST['contact'];
-	$address = $_POST['address'];
-
-	// 2x2 picture
-	$msg = "";
-	$pic = $_FILES['pic']['name'];
-	$p_image_tmp_name = $_FILES['pic']['tmp_name'];
-	$p_image_folder = 'images/'.$pic; 
-
-	if(move_uploaded_file($_FILES['pic']['tmp_name'], $p_image_folder)) {
-		$msg = "Image uploaded successfully";
-  	}else{
-  		$msg = "Failed to upload image";
-  	}
 
 	// student id
 	$msg = "";
@@ -35,7 +20,7 @@ if(isset($_POST['submit'])){
   	}else{
   		$msg = "Failed to upload image";
   	}
-
+	
 	// LOI 1st
 	$msg = "";
 	$loi_1st = $_FILES['loi_1st']['name'];
@@ -43,6 +28,18 @@ if(isset($_POST['submit'])){
 	$p_image_folder = 'documents/'.$loi_1st;
 
 	if(move_uploaded_file($_FILES['loi_1st']['tmp_name'], $p_image_folder)) {
+		$msg = "Image uploaded successfully";
+  	}else{
+  		$msg = "Failed to upload image";
+  	}
+
+	// LOI 2nd
+	$msg = "";
+	$loi_2nd = $_FILES['loi_2nd']['name'];
+	$p_image_tmp_name = $_FILES['loi_2nd']['tmp_name'];
+	$p_image_folder = 'documents/'.$loi_2nd;
+
+	if(move_uploaded_file($_FILES['loi_2nd']['tmp_name'], $p_image_folder)) {
 		$msg = "Image uploaded successfully";
   	}else{
   		$msg = "Failed to upload image";
@@ -96,26 +93,14 @@ if(isset($_POST['submit'])){
   		$msg = "Failed to upload image";
   	}
 
-  	$sql = "SELECT * FROM student WHERE lrn = '$lrn'";
-	$result = mysqli_query($conn, $sql);
+  	$update = "UPDATE student SET lrn='$lrn', fname='$fname', std_id='$std_id', loi_1st ='$loi_1st', loi_2nd='$loi_2nd', regform_1st ='$regform_1st', regform_2nd ='$regform_2nd', grades_1st = '$grades_1st', grades_2nd = '$grades_2nd' WHERE id=$id";
+  	$result = mysqli_query($conn, $update);
 
-	if (!$result->num_rows > 0) {
-			
-  	$sql = "INSERT INTO student (lrn,fname,gender,course,year,contact,address,pic,std_id,loi_1st,regform_1st,regform_2nd,grades_1st,grades_2nd) VALUES ('$lrn','$fname','$gender','$course','$year','$contact','$address','$pic','$std_id','$loi_1st','$regform_1st','$regform_2nd','$grades_1st','$grades_2nd')";
-  	$result = mysqli_query($conn, $sql);
+  	if($result){
+  		header('location:studentinfo2.php');
+  	}else{
+  		echo "Data not insert";
+  	}
 
-  	if ($result) {
-			header('location:studentinfo.php');
-		}
-	
-		else {
-			echo "<script>alert('Something Went Wrong.')</script>";
-			}
-		}
-
-		else {
-			echo "<script>alert('Opss SCHOOL ID Already Exist.')</script>";
-		
-		}
-	}
+  }
 ?>

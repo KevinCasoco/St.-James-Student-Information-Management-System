@@ -22,6 +22,7 @@ include('navbar.php');
              .container {
               top: 16%;
               left: 10%;
+              margin: 50px auto;
               position: absolute;
 
              }
@@ -34,12 +35,12 @@ include('navbar.php');
              }
 
              .student {
-              left: 5%;
+              left: 6%;
               position: absolute;
              }
             .student1{
               top: 0%;
-              left: 75%;
+              left: 76%;
               position: absolute;
              }
 
@@ -134,13 +135,8 @@ include('navbar.php');
           </div> 
            
           <div class="form-group">
-            <label>LOI 1ST YEAR</label>
+            <label>LETTER OF INTENT</label>
             <input type="file" name="loi_1st" accept="application/msword,text/plain, application/pdf" class="form-control" required>
-          </div>
-
-          <div class="form-group">
-            <label>LOI 2ND YEAR</label>
-            <input type="file" name="loi_2nd" accept="application/msword,text/plain, application/pdf" class="form-control" required>
           </div>
 
           <div class="form-group">
@@ -162,7 +158,7 @@ include('navbar.php');
             <label>GRADES 2ND SEM</label>
             <input type="file" name="grades_2nd" accept="image/png, image/jpg, image/jpeg"  class="form-control">
           </div> 
-
+           <br>
            <center><input type="submit" name="submit" class="btn btn-info btn-large" value="Submit"></center>
           
           

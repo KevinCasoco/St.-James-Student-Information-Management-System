@@ -1,6 +1,6 @@
  <?php  
  
- include('navbar.php');
+ include('navbar2.php');
  include('config.php');
 
  $query ="SELECT * FROM student ORDER BY ID DESC";  
@@ -15,7 +15,6 @@
            <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>  
            <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>            
            <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
-           <link rel="stylesheet" href="styles.css">
 
             <style type="text/css">
              .container {
@@ -30,7 +29,7 @@
       <body>  
            <br /><br />  
            <div class="container">   
-                <br />  <br><br><br>
+                <br />  <br>
                 <div class="table-responsive">  
                     <h3 align="center"> LIST OF STUDENTS</h3>  
                      <table id="student_data" class="table table-striped table-bordered">  
@@ -53,14 +52,14 @@
                           {  
                                echo '
                            <tr>
-                               <td class="text-center">'.$row["id"].'</td>
-                               <td class="text-center">'.$row["lrn"].'</td>
-                               <td class="text-center">'.$row["fname"].'</td>
-                               <td class="text-center">'.$row["gender"].'</td>
-                               <td class="text-center">'.$row["course"].'</td>
-                               <td class="text-center">'.$row["year"].'</td>
-                               <td class="text-center">'.$row["contact"].'</td>
-                               <td class="text-center">'.$row["address"].'</td>
+                               <td>'.$row["id"].'</td>
+                               <td>'.$row["lrn"].'</td>
+                               <td>'.$row["fname"].'</td>
+                               <td>'.$row["gender"].'</td>
+                               <td>'.$row["course"].'</td>
+                               <td>'.$row["year"].'</td>
+                               <td>'.$row["contact"].'</td>
+                               <td>'.$row["address"].'</td>
 
                           </tr>
                                ';

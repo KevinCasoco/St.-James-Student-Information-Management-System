@@ -1,7 +1,7 @@
 <?php
 
 include('config.php');
-include('navbar.php');
+include('navbar2.php');
 
 
 			if(isset($_GET['page']))
@@ -77,8 +77,6 @@ include('navbar.php');
 				<th class="text-center">CONTACT NO.</th>
 				<th class="text-center">ADDRESS</th>
 				<th class="text-center">PICTURE</th>
-				<th class="text-center">EDIT</th>
-				<th class="text-center">DELETE</th>
 			</tr>
 
 			<?php
@@ -110,19 +108,7 @@ include('navbar.php');
 				<td class='text-center'>$address</td>
 				<td class='text-center'><a href='#'><img src='images/$pic' style='width:50px; height:50px;'></td>
 				<td class='text-center'>
-					<span>
-					     <a href='#'>
-					         <i class='fa fa-pencil' data-toggle='modal' data-target='#edit$id' style='' aria-hidden='true'></i>
-					    </a>
-					</span>
 					
-				</td>
-				<td class='text-center'>
-					<span>
-						<a href='#'>
-						     <i class='fa fa-trash' data-toggle='modal' data-target='#$id' style='' aria-hidden='true'></i>
-						</a>
-					</span>
 					
 				</td>
 			</tr>
@@ -189,7 +175,7 @@ while($row = mysqli_fetch_array($run_data))
         <h4 class='modal-title text-center'>Are you want to sure??</h4>
       </div>
       <div class='modal-body'>
-        <a href='remove.php?id=$id' class='btn btn-danger' style='margin-left:250px'>Delete</a>
+        <a href='delete.php?id=$id' class='btn btn-danger' style='margin-left:250px'>Delete</a>
       </div>
       
     </div>
@@ -274,7 +260,7 @@ while($row = mysqli_fetch_array($sql))
         	</div>
         	<div class='form-group'>
         		<label>Contact</label>
-        		<input type='text' name='contact' class='form-control' value='$contact'>
+        		<input type='number' name='contact' class='form-control' value='$contact'>
         	</div>
         	<div class='form-group'>
         		<label>Address</label>

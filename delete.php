@@ -1,6 +1,6 @@
 <?php
 
-include('config.php');
+include('connectionn.php');
 
 $id = $_GET['id'];
 $delete = "DELETE FROM student WHERE id = $id";

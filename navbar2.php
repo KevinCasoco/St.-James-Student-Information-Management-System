@@ -13,12 +13,11 @@
         <h2>Admin</h2>
 
         <br>
+        <br>
         <ul>
-            <li><a href="studentinformation.php"><i class="fas fa-search"></i>Browse Students</a></li>
-            <li><a href="newstudent.php"><i class="fas fa-user"></i>Register Students</a></li>
-            <li><a href="studentinfo.php"><i class="fas fa-table"></i>List of Students</a></li>
-            <li><a href="studentinfo2.php"><i class="fas fa-table"></i>Application of Students</a></li>
-            <li><a href="recycle.php"><i class="fas fa-recycle"></i>Recycle Bin</a></li>
+            <li><a href="studentinformation2.php"><i class="fas fa-search"></i>Browse Students</a></li>
+            <li><a href="studentinfo3.php"><i class="fas fa-table"></i>List of Students</a></li>
+            <li><a href="studentinfo4.php"><i class="fas fa-table"></i>Application of Students</a></li>
             <li><a href="logout.php"><i class="fas fa-user"></i>Log Out</a></li>
                                            
         </ul> 
@@ -29,7 +28,8 @@
       </div>
     </div>
     <div class="main_content">
-        <div class="header"><h2><center>ST. JAMES STUDENT INFORMATION MANAGEMENT SYSTEM</center></h2></div>
+        <div class="header"><h2><center>St. James Student Information Management System</center></h2></div>  
+        <div class="info">
           
       </div>
     </div>
